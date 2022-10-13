@@ -228,7 +228,7 @@
 				"defaultValue": "customers"
 			},
 			"p_key_column": {
-				"type": "array",
+				"type": "string",
 				"defaultValue": "customerID"
 			},
 			"ctbl_schema": {
