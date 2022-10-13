@@ -7,13 +7,12 @@
 		},
 		"parameters": {
 			"ds_folder": {
-				"type": "string"
-			},
-			"ds_filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "sqldata"
 			},
 			"ds_container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "sql-demo"
 			}
 		},
 		"folder": {
