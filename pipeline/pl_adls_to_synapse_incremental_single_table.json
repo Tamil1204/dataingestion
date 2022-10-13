@@ -224,13 +224,16 @@
 		],
 		"parameters": {
 			"p_source_table": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "customers"
 			},
 			"p_key_column": {
-				"type": "array"
+				"type": "array",
+				"defaultValue": "customerID"
 			},
 			"ctbl_schema": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "sqldemo"
 			}
 		},
 		"variables": {
