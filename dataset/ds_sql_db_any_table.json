@@ -7,10 +7,12 @@
 		},
 		"parameters": {
 			"ds_schema": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "dbo"
 			},
 			"ds_tablename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Agency"
 			}
 		},
 		"folder": {
