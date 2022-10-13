@@ -43,6 +43,18 @@
 			"type": "string",
 			"defaultValue": "https://demo-keyvault-demo.vault.azure.net/"
 		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_p_trigger_schedule": {
+			"type": "string",
+			"defaultValue": "trigger1"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_schema": {
+			"type": "string",
+			"defaultValue": "sqldemo"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_name": {
+			"type": "string",
+			"defaultValue": "control_table"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -114,6 +126,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_p_trigger_schedule": {
+						"value": "[parameters('trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_p_trigger_schedule')]"
+					},
+					"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_schema": {
+						"value": "[parameters('trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_schema')]"
+					},
+					"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_name": {
+						"value": "[parameters('trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_name')]"
 					}
 				}
 			},

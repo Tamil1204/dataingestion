@@ -6,6 +6,18 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "demo-adf-tamil"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_p_trigger_schedule": {
+			"type": "string",
+			"defaultValue": "trigger1"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_schema": {
+			"type": "string",
+			"defaultValue": "sqldemo"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_name": {
+			"type": "string",
+			"defaultValue": "control_table"
 		}
 	},
 	"variables": {
@@ -512,7 +524,7 @@
 								"type": "DatasetReference",
 								"parameters": {
 									"ds_schema": "schema",
-									"ds_tablename": "table"
+									"ds_tablename": "tablename"
 								}
 							},
 							"firstRowOnly": false
@@ -620,10 +632,12 @@
 				},
 				"parameters": {
 					"schemaname": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"tablename": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control-table"
 					},
 					"cntrl_table_his_grp_column": {
 						"type": "string",
@@ -631,7 +645,7 @@
 					},
 					"cntrl_table_qstring": {
 						"type": "string",
-						"defaultValue": " select year(date) his_grp_column, COUNT(*) CNT from schema.tablename"
+						"defaultValue": " select tablename, year(date), his_grp_column, COUNT(*) CNT from schema.table"
 					},
 					"folder": {
 						"type": "string",
@@ -646,7 +660,8 @@
 						"defaultValue": "year(date) ='part_value'"
 					},
 					"container": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sql-demo"
 					}
 				},
 				"folder": {
@@ -1182,13 +1197,16 @@
 				},
 				"parameters": {
 					"p_trigger_schedule": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "trigger1"
 					},
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ctbl_name": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					}
 				},
 				"variables": {
@@ -2087,13 +2105,16 @@
 				},
 				"parameters": {
 					"p_source_table": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "customers"
 					},
 					"p_key_column": {
-						"type": "array"
+						"type": "string",
+						"defaultValue": "customerID"
 					},
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					}
 				},
 				"variables": {
@@ -2506,16 +2527,20 @@
 				},
 				"parameters": {
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ctbl_name": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					},
 					"trigger_segment": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "trigger1"
 					},
 					"p_load_type": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "history"
 					}
 				},
 				"folder": {
@@ -2950,16 +2975,20 @@
 				},
 				"parameters": {
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ctbl_name": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					},
 					"trigger_segment": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "trigger1"
 					},
 					"p_load_type": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "history"
 					}
 				},
 				"folder": {
@@ -3047,13 +3076,16 @@
 				},
 				"parameters": {
 					"p_trigger_schedule": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "trigger1"
 					},
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ctbl_name": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					}
 				},
 				"folder": {
@@ -3065,6 +3097,40 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/pl_sqldb_adls_all_tables_incremental_seq1')]",
 				"[concat(variables('factoryId'), '/pipelines/pl_adls_synapse_all_tables_incremental_seq2')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "pl_end_to_end_inc_sqldb_synapse",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"p_trigger_schedule": "[parameters('trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_p_trigger_schedule')]",
+							"ctbl_schema": "[parameters('trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_schema')]",
+							"ctbl_name": "[parameters('trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_name')]"
+						}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 15,
+						"startTime": "2022-10-13T09:08:00Z",
+						"timeZone": "UTC"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/pl_end_to_end_inc_sqldb_synapse')]"
 			]
 		}
 	]

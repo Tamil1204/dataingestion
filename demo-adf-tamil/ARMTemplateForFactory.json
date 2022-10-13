@@ -42,6 +42,18 @@
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://demo-keyvault-demo.vault.azure.net/"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_p_trigger_schedule": {
+			"type": "string",
+			"defaultValue": "trigger1"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_schema": {
+			"type": "string",
+			"defaultValue": "sqldemo"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_name": {
+			"type": "string",
+			"defaultValue": "control_table"
 		}
 	},
 	"variables": {
@@ -1663,13 +1675,16 @@
 				},
 				"parameters": {
 					"p_source_table": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "customers"
 					},
 					"p_key_column": {
-						"type": "array"
+						"type": "string",
+						"defaultValue": "customerID"
 					},
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					}
 				},
 				"variables": {
@@ -1773,16 +1788,20 @@
 				},
 				"parameters": {
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ctbl_name": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					},
 					"trigger_segment": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "trigger1"
 					},
 					"p_load_type": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "history"
 					}
 				},
 				"folder": {
@@ -1870,13 +1889,16 @@
 				},
 				"parameters": {
 					"p_trigger_schedule": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "trigger1"
 					},
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ctbl_name": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					}
 				},
 				"folder": {
@@ -1923,7 +1945,7 @@
 								"type": "DatasetReference",
 								"parameters": {
 									"ds_schema": "schema",
-									"ds_tablename": "table"
+									"ds_tablename": "tablename"
 								}
 							},
 							"firstRowOnly": false
@@ -2031,10 +2053,12 @@
 				},
 				"parameters": {
 					"schemaname": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"tablename": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control-table"
 					},
 					"cntrl_table_his_grp_column": {
 						"type": "string",
@@ -2042,7 +2066,7 @@
 					},
 					"cntrl_table_qstring": {
 						"type": "string",
-						"defaultValue": " select year(date) his_grp_column, COUNT(*) CNT from schema.tablename"
+						"defaultValue": " select tablename, year(date), his_grp_column, COUNT(*) CNT from schema.table"
 					},
 					"folder": {
 						"type": "string",
@@ -2057,7 +2081,8 @@
 						"defaultValue": "year(date) ='part_value'"
 					},
 					"container": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sql-demo"
 					}
 				},
 				"folder": {
@@ -2465,16 +2490,20 @@
 				},
 				"parameters": {
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ctbl_name": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					},
 					"trigger_segment": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "trigger1"
 					},
 					"p_load_type": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "history"
 					}
 				},
 				"folder": {
@@ -3015,13 +3044,16 @@
 				},
 				"parameters": {
 					"p_trigger_schedule": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "trigger1"
 					},
 					"ctbl_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ctbl_name": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					}
 				},
 				"variables": {
@@ -3173,13 +3205,16 @@
 				},
 				"parameters": {
 					"ds_folder": {
-						"type": "string"
-					},
-					"ds_filename": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldata"
 					},
 					"ds_container": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sql-demo"
+					},
+					"ds_filename": {
+						"type": "string",
+						"defaultValue": "userdata1"
 					}
 				},
 				"folder": {
@@ -3412,10 +3447,12 @@
 				},
 				"parameters": {
 					"ds_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ds_tablename": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					}
 				},
 				"folder": {
@@ -3423,7 +3460,93 @@
 				},
 				"annotations": [],
 				"type": "AzureSqlTable",
-				"schema": [],
+				"schema": [
+					{
+						"name": "source_table",
+						"type": "varchar"
+					},
+					{
+						"name": "dest_table",
+						"type": "varchar"
+					},
+					{
+						"name": "source_path",
+						"type": "varchar"
+					},
+					{
+						"name": "target_path",
+						"type": "varchar"
+					},
+					{
+						"name": "flow_sequence",
+						"type": "varchar"
+					},
+					{
+						"name": "run_status",
+						"type": "varchar"
+					},
+					{
+						"name": "qstring",
+						"type": "varchar"
+					},
+					{
+						"name": "watermark_col",
+						"type": "nvarchar"
+					},
+					{
+						"name": "watermark_val",
+						"type": "varchar"
+					},
+					{
+						"name": "key_column",
+						"type": "varchar"
+					},
+					{
+						"name": "source_name",
+						"type": "varchar"
+					},
+					{
+						"name": "load_type",
+						"type": "varchar"
+					},
+					{
+						"name": "start_run",
+						"type": "varchar"
+					},
+					{
+						"name": "source_id",
+						"type": "varchar"
+					},
+					{
+						"name": "Container",
+						"type": "varchar"
+					},
+					{
+						"name": "Last_updated_date",
+						"type": "datetime2",
+						"scale": 7
+					},
+					{
+						"name": "partition_flag",
+						"type": "char"
+					},
+					{
+						"name": "his_grp_column",
+						"type": "varchar"
+					},
+					{
+						"name": "watermark_where_cond",
+						"type": "varchar"
+					},
+					{
+						"name": "trigger_segment",
+						"type": "varchar"
+					},
+					{
+						"name": "table_created",
+						"type": "char"
+					}
+				],
 				"typeProperties": {
 					"schema": {
 						"value": "@dataset().ds_schema",
@@ -3593,7 +3716,7 @@
 					}
 				],
 				"typeProperties": {
-					"schema": "dbo",
+					"schema": "sqldemo",
 					"table": "control_table"
 				}
 			},
@@ -3709,10 +3832,12 @@
 				},
 				"parameters": {
 					"ds_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ds_table": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					}
 				},
 				"folder": {
@@ -3891,6 +4016,40 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "pl_end_to_end_inc_sqldb_synapse",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"p_trigger_schedule": "[parameters('trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_p_trigger_schedule')]",
+							"ctbl_schema": "[parameters('trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_schema')]",
+							"ctbl_name": "[parameters('trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_name')]"
+						}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 15,
+						"startTime": "2022-10-13T09:08:00Z",
+						"timeZone": "UTC"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/pl_end_to_end_inc_sqldb_synapse')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/df_adls_synapse_current')]",

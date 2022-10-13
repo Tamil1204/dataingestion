@@ -32,6 +32,15 @@
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://demo-keyvault-demo.vault.azure.net/"
 		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_p_trigger_schedule": {
+			"value": "trigger1"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_schema": {
+			"value": "sqldemo"
+		},
+		"trigger1_properties_pl_end_to_end_inc_sqldb_synapse_parameters_ctbl_name": {
+			"value": "control_table"
+		},
 		"containerUri": {
 			"value": ""
 		},

@@ -271,13 +271,16 @@
 				},
 				"parameters": {
 					"ds_folder": {
-						"type": "string"
-					},
-					"ds_filename": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldata"
 					},
 					"ds_container": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sql-demo"
+					},
+					"ds_filename": {
+						"type": "string",
+						"defaultValue": "userdata1"
 					}
 				},
 				"folder": {
@@ -510,10 +513,12 @@
 				},
 				"parameters": {
 					"ds_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ds_tablename": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					}
 				},
 				"folder": {
@@ -521,7 +526,93 @@
 				},
 				"annotations": [],
 				"type": "AzureSqlTable",
-				"schema": [],
+				"schema": [
+					{
+						"name": "source_table",
+						"type": "varchar"
+					},
+					{
+						"name": "dest_table",
+						"type": "varchar"
+					},
+					{
+						"name": "source_path",
+						"type": "varchar"
+					},
+					{
+						"name": "target_path",
+						"type": "varchar"
+					},
+					{
+						"name": "flow_sequence",
+						"type": "varchar"
+					},
+					{
+						"name": "run_status",
+						"type": "varchar"
+					},
+					{
+						"name": "qstring",
+						"type": "varchar"
+					},
+					{
+						"name": "watermark_col",
+						"type": "nvarchar"
+					},
+					{
+						"name": "watermark_val",
+						"type": "varchar"
+					},
+					{
+						"name": "key_column",
+						"type": "varchar"
+					},
+					{
+						"name": "source_name",
+						"type": "varchar"
+					},
+					{
+						"name": "load_type",
+						"type": "varchar"
+					},
+					{
+						"name": "start_run",
+						"type": "varchar"
+					},
+					{
+						"name": "source_id",
+						"type": "varchar"
+					},
+					{
+						"name": "Container",
+						"type": "varchar"
+					},
+					{
+						"name": "Last_updated_date",
+						"type": "datetime2",
+						"scale": 7
+					},
+					{
+						"name": "partition_flag",
+						"type": "char"
+					},
+					{
+						"name": "his_grp_column",
+						"type": "varchar"
+					},
+					{
+						"name": "watermark_where_cond",
+						"type": "varchar"
+					},
+					{
+						"name": "trigger_segment",
+						"type": "varchar"
+					},
+					{
+						"name": "table_created",
+						"type": "char"
+					}
+				],
 				"typeProperties": {
 					"schema": {
 						"value": "@dataset().ds_schema",
@@ -691,7 +782,7 @@
 					}
 				],
 				"typeProperties": {
-					"schema": "dbo",
+					"schema": "sqldemo",
 					"table": "control_table"
 				}
 			},
@@ -807,10 +898,12 @@
 				},
 				"parameters": {
 					"ds_schema": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "sqldemo"
 					},
 					"ds_table": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "control_table"
 					}
 				},
 				"folder": {
