@@ -29,7 +29,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_schema": "schema",
-							"ds_tablename": "table"
+							"ds_tablename": "tablename"
 						}
 					},
 					"firstRowOnly": false
@@ -146,7 +146,7 @@
 			},
 			"cntrl_table_qstring": {
 				"type": "string",
-				"defaultValue": " select year(date) ,his_grp_column, COUNT(*) CNT from schema.table"
+				"defaultValue": " select tablename, year(date), his_grp_column, COUNT(*) CNT from schema.table"
 			},
 			"folder": {
 				"type": "string",
