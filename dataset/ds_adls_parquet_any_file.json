@@ -13,6 +13,10 @@
 			"ds_container": {
 				"type": "string",
 				"defaultValue": "sql-demo"
+			},
+			"ds_filename": {
+				"type": "string",
+				"defaultValue": "userdata1"
 			}
 		},
 		"folder": {
