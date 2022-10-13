@@ -133,10 +133,12 @@
 		],
 		"parameters": {
 			"schemaname": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "sqldemo"
 			},
 			"tablename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "customers"
 			},
 			"cntrl_table_his_grp_column": {
 				"type": "string",
@@ -159,7 +161,8 @@
 				"defaultValue": "year(date) ='part_value'"
 			},
 			"container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "sql-demo"
 			}
 		},
 		"folder": {

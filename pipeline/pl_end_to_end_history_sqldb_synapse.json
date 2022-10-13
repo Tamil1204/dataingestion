@@ -74,16 +74,20 @@
 		],
 		"parameters": {
 			"ctbl_schema": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "sqldemo"
 			},
 			"ctbl_name": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "control_table"
 			},
 			"trigger_segment": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "trigger1"
 			},
 			"p_load_type": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "history"
 			}
 		},
 		"folder": {

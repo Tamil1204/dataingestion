@@ -398,7 +398,8 @@
 				"defaultValue": "trigger1"
 			},
 			"p_load_type": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "history"
 			}
 		},
 		"folder": {
