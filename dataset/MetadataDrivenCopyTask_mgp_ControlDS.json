@@ -1,0 +1,20 @@
+{
+	"name": "MetadataDrivenCopyTask_mgp_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedService2",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_mgp_20221012"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "MainControlTable_mgp"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "demo-adf-tamil",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0f05f2c9-8c09-438b-a227-b19cd290d936",
+		"tenantId": "30bf9f37-d550-4878-9494-1041656caf27"
+	}
+}
