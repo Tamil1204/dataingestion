@@ -28,8 +28,8 @@
 						"referenceName": "ds_sql_db_any_table1",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_schema": "sqldemo",
-							"ds_tablename": "customers"
+							"ds_schema": "schema",
+							"ds_tablename": "table"
 						}
 					},
 					"firstRowOnly": false
@@ -138,7 +138,7 @@
 			},
 			"tablename": {
 				"type": "string",
-				"defaultValue": "customers"
+				"defaultValue": "control_table"
 			},
 			"cntrl_table_his_grp_column": {
 				"type": "string",
