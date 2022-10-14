@@ -138,7 +138,7 @@
 			},
 			"tablename": {
 				"type": "string",
-				"defaultValue": "control_table"
+				"defaultValue": "customers"
 			},
 			"cntrl_table_his_grp_column": {
 				"type": "string",
@@ -162,7 +162,7 @@
 			},
 			"cntrl_table_qstring": {
 				"type": "string",
-				"defaultValue": "select qstring from schema.tablename"
+				"defaultValue": "select year(date) his_grp_column, COUNT(*) CNT from schema.tablename"
 			}
 		},
 		"folder": {
