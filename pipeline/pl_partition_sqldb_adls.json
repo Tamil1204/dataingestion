@@ -17,6 +17,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "@pipeline().parameters.cntrl_table_qstring",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -155,6 +159,10 @@
 			"container": {
 				"type": "string",
 				"defaultValue": "sql-demo"
+			},
+			"cntrl_table_qstring": {
+				"type": "string",
+				"defaultValue": "select qstring from schema.tablename"
 			}
 		},
 		"folder": {
