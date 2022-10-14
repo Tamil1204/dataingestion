@@ -28,8 +28,8 @@
 						"referenceName": "ds_sql_db_any_table1",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds_schema": "schema",
-							"ds_tablename": "table"
+							"ds_schema": "sqldemo",
+							"ds_tablename": "customers"
 						}
 					},
 					"firstRowOnly": false
