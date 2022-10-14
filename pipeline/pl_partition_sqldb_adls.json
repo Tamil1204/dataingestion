@@ -138,7 +138,7 @@
 			},
 			"tablename": {
 				"type": "string",
-				"defaultValue": "control-table"
+				"defaultValue": "control_table"
 			},
 			"cntrl_table_his_grp_column": {
 				"type": "string",
