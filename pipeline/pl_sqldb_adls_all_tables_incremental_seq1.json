@@ -517,7 +517,7 @@
 		"parameters": {
 			"p_trigger_schedule": {
 				"type": "string",
-				"defaultValue": "full load"
+				"defaultValue": "fullload"
 			},
 			"ctbl_schema": {
 				"type": "string",
