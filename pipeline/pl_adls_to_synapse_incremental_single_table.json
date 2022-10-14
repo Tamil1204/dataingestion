@@ -225,15 +225,15 @@
 		"parameters": {
 			"p_source_table": {
 				"type": "string",
-				"defaultValue": "Agency"
+				"defaultValue": "customers"
 			},
 			"p_key_column": {
 				"type": "string",
-				"defaultValue": "AgencyId"
+				"defaultValue": "CustomerID"
 			},
 			"ctbl_schema": {
 				"type": "string",
-				"defaultValue": "dbo"
+				"defaultValue": "sqldemo"
 			}
 		},
 		"variables": {
