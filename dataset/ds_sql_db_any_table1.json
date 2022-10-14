@@ -22,25 +22,89 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "CustomerID",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "LastName",
+				"name": "source_table",
 				"type": "varchar"
 			},
 			{
-				"name": "FirstName",
+				"name": "dest_table",
 				"type": "varchar"
 			},
 			{
-				"name": "Addressline1",
+				"name": "source_path",
 				"type": "varchar"
 			},
 			{
-				"name": "City",
+				"name": "target_path",
 				"type": "varchar"
+			},
+			{
+				"name": "flow_sequence",
+				"type": "varchar"
+			},
+			{
+				"name": "run_status",
+				"type": "varchar"
+			},
+			{
+				"name": "qstring",
+				"type": "varchar"
+			},
+			{
+				"name": "watermark_col",
+				"type": "nvarchar"
+			},
+			{
+				"name": "watermark_val",
+				"type": "varchar"
+			},
+			{
+				"name": "key_column",
+				"type": "varchar"
+			},
+			{
+				"name": "source_name",
+				"type": "varchar"
+			},
+			{
+				"name": "load_type",
+				"type": "varchar"
+			},
+			{
+				"name": "start_run",
+				"type": "varchar"
+			},
+			{
+				"name": "source_id",
+				"type": "varchar"
+			},
+			{
+				"name": "Container",
+				"type": "varchar"
+			},
+			{
+				"name": "Last_updated_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "partition_flag",
+				"type": "char"
+			},
+			{
+				"name": "his_grp_column",
+				"type": "varchar"
+			},
+			{
+				"name": "watermark_where_cond",
+				"type": "varchar"
+			},
+			{
+				"name": "trigger_segment",
+				"type": "varchar"
+			},
+			{
+				"name": "table_created",
+				"type": "char"
 			}
 		],
 		"typeProperties": {
