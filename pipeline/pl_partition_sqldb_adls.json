@@ -144,10 +144,6 @@
 				"type": "string",
 				"defaultValue": "CONCAT(EXTRACT(YEAR  FROM BLNG_DT), EXTRACT(MONTH FROM date))"
 			},
-			"cntrl_table_qstring": {
-				"type": "string",
-				"defaultValue": " select year(date) his_grp_column, COUNT(*) CNT from schema.tablename"
-			},
 			"folder": {
 				"type": "string",
 				"defaultValue": "tablename/raw/history"
