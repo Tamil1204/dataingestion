@@ -17,10 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": {
-							"value": "@pipeline().parameters.cntrl_table_qstring",
-							"type": "Expression"
-						},
+						"sqlReaderQuery": "@pipeline().parameters.cntrl_table_qstring",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
