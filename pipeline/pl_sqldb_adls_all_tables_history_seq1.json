@@ -395,7 +395,7 @@
 			},
 			"trigger_segment": {
 				"type": "string",
-				"defaultValue": "trigger1"
+				"defaultValue": "full load"
 			},
 			"p_load_type": {
 				"type": "string",
