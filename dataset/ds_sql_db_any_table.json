@@ -8,11 +8,11 @@
 		"parameters": {
 			"ds_schema": {
 				"type": "string",
-				"defaultValue": "dbo"
+				"defaultValue": "sqldemo"
 			},
 			"ds_tablename": {
 				"type": "string",
-				"defaultValue": "Agency"
+				"defaultValue": "control_table"
 			}
 		},
 		"folder": {
