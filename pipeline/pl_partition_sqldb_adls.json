@@ -146,7 +146,7 @@
 			},
 			"cntrl_table_qstring": {
 				"type": "string",
-				"defaultValue": " select tablename, year(date), his_grp_column, COUNT(*) CNT from schema.table"
+				"defaultValue": " select year(date) his_grp_column, COUNT(*) CNT from schema.tablename"
 			},
 			"folder": {
 				"type": "string",
