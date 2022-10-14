@@ -12,7 +12,7 @@
 			},
 			"ds_tablename": {
 				"type": "string",
-				"defaultValue": "customers"
+				"defaultValue": "control_table"
 			}
 		},
 		"folder": {
