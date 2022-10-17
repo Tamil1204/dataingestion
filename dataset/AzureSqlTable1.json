@@ -1,0 +1,503 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azuredatatransform",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ClientId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CreatedBy",
+				"type": "varchar"
+			},
+			{
+				"name": "CreatedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ModifiedBy",
+				"type": "varchar"
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "RecordDeleted",
+				"type": "char"
+			},
+			{
+				"name": "DeletedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DeletedBy",
+				"type": "varchar"
+			},
+			{
+				"name": "ExternalClientId",
+				"type": "varchar"
+			},
+			{
+				"name": "Active",
+				"type": "char"
+			},
+			{
+				"name": "MRN",
+				"type": "varchar"
+			},
+			{
+				"name": "LastName",
+				"type": "varchar"
+			},
+			{
+				"name": "FirstName",
+				"type": "varchar"
+			},
+			{
+				"name": "MiddleName",
+				"type": "varchar"
+			},
+			{
+				"name": "Prefix",
+				"type": "varchar"
+			},
+			{
+				"name": "Suffix",
+				"type": "varchar"
+			},
+			{
+				"name": "SSN",
+				"type": "varchar"
+			},
+			{
+				"name": "Sex",
+				"type": "char"
+			},
+			{
+				"name": "DOB",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "PrimaryClinicianId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CountyOfResidence",
+				"type": "varchar"
+			},
+			{
+				"name": "CountyOfTreatment",
+				"type": "varchar"
+			},
+			{
+				"name": "CorrectionStatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Email",
+				"type": "varchar"
+			},
+			{
+				"name": "Comment",
+				"type": "text"
+			},
+			{
+				"name": "LivingArrangement",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NumberOfBeds",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MinimumWage",
+				"type": "char"
+			},
+			{
+				"name": "FinanciallyResponsible",
+				"type": "char"
+			},
+			{
+				"name": "AnnualHouseholdIncome",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "NumberOfDependents",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MaritalStatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EmploymentStatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EmploymentInformation",
+				"type": "varchar"
+			},
+			{
+				"name": "MilitaryStatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EducationalStatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DoesNotSpeakEnglish",
+				"type": "char"
+			},
+			{
+				"name": "PrimaryLanguage",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CurrentEpisodeNumber",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AssignedAdminStaffId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "InpatientCaseManager",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "InformationComplete",
+				"type": "char"
+			},
+			{
+				"name": "PrimaryProgramId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LastNameSoundex",
+				"type": "char"
+			},
+			{
+				"name": "FirstNameSoundex",
+				"type": "char"
+			},
+			{
+				"name": "CurrentBalance",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "CareManagementId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "HispanicOrigin",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DeceasedOn",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "LastStatementDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "LastPaymentId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LastClientStatementId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DoNotSendStatement",
+				"type": "char"
+			},
+			{
+				"name": "DoNotSendStatementReason",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AccountingNotes",
+				"type": "text"
+			},
+			{
+				"name": "MasterRecord",
+				"type": "char"
+			},
+			{
+				"name": "ProviderPrimaryClinicianId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RowIdentifier",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "ExternalReferenceId",
+				"type": "varchar"
+			},
+			{
+				"name": "DoNotOverwritePlan",
+				"type": "char"
+			},
+			{
+				"name": "Disposition",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NoKnownAllergies",
+				"type": "char"
+			},
+			{
+				"name": "ReminderPreference",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MobilePhoneProvider",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SchedulingPreferenceMonday",
+				"type": "char"
+			},
+			{
+				"name": "SchedulingPreferenceTuesday",
+				"type": "char"
+			},
+			{
+				"name": "SchedulingPreferenceWednesday",
+				"type": "char"
+			},
+			{
+				"name": "SchedulingPreferenceThursday",
+				"type": "char"
+			},
+			{
+				"name": "SchedulingPreferenceFriday",
+				"type": "char"
+			},
+			{
+				"name": "GeographicLocation",
+				"type": "varchar"
+			},
+			{
+				"name": "SchedulingComment",
+				"type": "varchar"
+			},
+			{
+				"name": "CauseofDeath",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FosterCareLicence",
+				"type": "varchar"
+			},
+			{
+				"name": "PrimaryPhysicianId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AllergiesLastReviewedBy",
+				"type": "varchar"
+			},
+			{
+				"name": "AllergiesLastReviewedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "AllergiesReviewStatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "HasNoMedications",
+				"type": "char"
+			},
+			{
+				"name": "UserStaffId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ProfessionalSuffix",
+				"type": "varchar"
+			},
+			{
+				"name": "ClientType",
+				"type": "char"
+			},
+			{
+				"name": "OrganizationName",
+				"type": "varchar"
+			},
+			{
+				"name": "EIN",
+				"type": "varchar"
+			},
+			{
+				"name": "GenderIdentity",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SexualOrientation",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "InternalCollections",
+				"type": "char"
+			},
+			{
+				"name": "ExternalCollections",
+				"type": "char"
+			},
+			{
+				"name": "NoKnownAllergiesLastUpdatedBy",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NoKnownAllergiesLastUpdatedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SchedulingPreferenceSaturday",
+				"type": "char"
+			},
+			{
+				"name": "SchedulingPreferenceSunday",
+				"type": "char"
+			},
+			{
+				"name": "PreferredGenderPronoun",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ClientDoesNotHavePCP",
+				"type": "char"
+			},
+			{
+				"name": "ExternalReferralProviderId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "VeteranStatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SourceOfIncome",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CriminalJusticeInvolvement",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TransportationServiceNoteSpecialNeeds",
+				"type": "char"
+			},
+			{
+				"name": "TransportationServiceNote",
+				"type": "char"
+			},
+			{
+				"name": "TransportationServiceComment",
+				"type": "varchar"
+			},
+			{
+				"name": "NumberInHousehold",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PreferredClientPhoneId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CommunicationPreferenceTextMessage",
+				"type": "char"
+			},
+			{
+				"name": "CommunicationPreferenceEmail",
+				"type": "char"
+			},
+			{
+				"name": "CommunicationPreferenceVoice",
+				"type": "char"
+			},
+			{
+				"name": "CommunicationPreferenceSystemMessage",
+				"type": "char"
+			},
+			{
+				"name": "DisableNotifications",
+				"type": "char"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Clients"
+		}
+	}
+}
