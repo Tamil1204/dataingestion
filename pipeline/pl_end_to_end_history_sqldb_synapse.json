@@ -78,8 +78,7 @@
 				"defaultValue": "sqldemo"
 			},
 			"ctbl_name": {
-				"type": "string",
-				"defaultValue": "control_table"
+				"type": "string"
 			},
 			"trigger_segment": {
 				"type": "string",
